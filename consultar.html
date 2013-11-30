@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Banca UNITEC - Consultar Cliente</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Mejor visualización en dispositivos mobiles -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- FIN Mejor visualización en dispositivos mobiles -->
+          <a class="navbar-brand">Banca UNITEC</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="crear.html">Crea Cliente</a></li>
+            <li class="active"><a href="#contact">Consulta Cliente</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase">
+
+      <div class="jumbotron">
+        <h1>Consulta Cliente</h1>
+      </div>
+
+      <div class="row"> <!-- Formulario -->
+        <div class="col-xs-12 col-sm-8 col-md-8">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">No. Cliente</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="noCliente" placeholder="No. Cliente">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Nombre</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">A. Paterno</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="aPaterno" placeholder="Apellido Paterno">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">A. Materno</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="aMaterno" placeholder="Apellido Materno">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" id="buscar">Buscar</button>
+              </div>
+             </div>
+          </form>
+        </div>
+      </div><!-- Fin del Formulario -->
+
+      <div class="panel panel-default" id="panelBuscar"> <!-- Paner Mostrar cliente -->
+        <div class="panel-heading"><h4>Mostrar Cliente</h4></div>
+        <div class="panel-body">
+          <p>
+            <div class="row"> <!-- Formulario -->
+              <div class="col-xs-12 col-sm-8 col-md-8">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="noCliente" >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </p>
+          <label class="col-sm-2 control-label">Lista de cuentas:</label>
+        </div>
+        
+        <div class="table-responsive"> <!-- Tabla -->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Tipo de cuenta</th>
+                <th>Saldo</th>
+                <th>Protección</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Cheques</td>
+                <td>5000.00</td>
+                <td>Si</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Ahorros</td>
+                <td>200.00</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Ahorros</td>
+                <td>0.00</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Cheques</td>
+                <td>1000.00</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- Fin Tabla -->
+
+      </div> <!-- Fin Paner Mostrar cliente -->
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='ocultar.js'></script>
+  </body>
+</html>
