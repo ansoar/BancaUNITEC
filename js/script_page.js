@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$('#buscar').click(function(){
 		$('#panelBuscar').show('slow');
 	});
-	$('salirBuscar').click(function() {
+	$('#remove').click(function() {
 		$('#panelBuscar').hide('slow');
 	});
 
