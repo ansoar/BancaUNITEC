@@ -8,9 +8,26 @@ $(document).ready(function() {
 		numeroId++;	
 		});
 
-
+	//Ocultar y Mostrar Paner de Agregar Cuenta
+	$('#agregarCuentas').hide();
+	$('#botonCuenta').click(function(){
+		$('#agregarCuentas').slideDown('slow');
+	});
+	$('#removeAgregarCuenta').click(function(){
+		$('#agregarCuentas').slideUp('slow');
+	});
 
 	//Ocultar y Mostrar los elementos de Protección para AGREGAR CUENTA
+/*	$('#optionsTipo1').click(function(){
+		$('#optionProt1').removeAttr("disabled");
+		$('#optionProt2').removeAttr("disabled");
+	});
+	$('#optionsTipo2').click(function(){
+		$('#optionProt1').attr('disabled','disabled');
+		$('#optionProt2').attr('disabled','disabled');
+	});
+*/
+
 	$('#proteccion').hide();
 	$('#optionsTipo1').click(function(){
 		$('#proteccion').show('slow');
@@ -19,14 +36,26 @@ $(document).ready(function() {
 		$('#proteccion').hide('slow');
 	});
 
+
 	//Ocultar y Mostrar elementos de Buscar Cliente
 	$('#panelBuscar').hide();
 
 	$('#buscar').click(function(){
 		$('#panelBuscar').show('slow');
 	});
-	$('#remove').click(function() {
-		$('#panelBuscar').hide('slow');
+	$('#removeMostrar').click(function() {
+		$('#panelOperaciones').slideUp('slow');
+		$('#panelBuscar').slideUp('slow');
+	});
+
+	// Ocultar y Mostrar elementos de Operaciones
+	$('#panelOperaciones').hide();
+
+	$('.ope').click(function(){
+		$('#panelOperaciones').show('slow')
+	});
+	$('#removeOperaciones').click(function(){
+		$('#panelOperaciones').slideUp('slow');
 	});
 
 });

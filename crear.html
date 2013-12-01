@@ -15,7 +15,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -52,11 +52,150 @@
       </div>
     </nav>
 
-    <div class="container theme-showcase">
+    <div class="jumbotron"> <!-- Encabezado -->
+      <div class="container">
+        <h1>Crea Cliente</h1>
+      </div>
+    </div> <!-- Fin Encabezado --> 
 
-      <div class="jumbotron">
-        <h1>Crear Cliente</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div class="container"> <!-- Container Principal -->
+      
+      <div class="row">
+        <form role="form">
+          <div class="col-sm-4 form-group">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label>Apellido Paterno:</label>
+            <input type="text" class="form-control" placeholder="Apellido Parterno">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label>Apellido Materno</label>
+            <input type="text" class="form-control" placeholder="Apellido Materno">
+          </div>
+          <p><b>&nbsp;&nbsp;&nbsp;&nbsp;Cuentas:&nbsp;&nbsp;&nbsp;</b><button type="button" class="btn btn-default" id="botonCuenta">Agregar Cuenta</button></p><br>
+
+          <div id="agregarCuentas"> <!-- Panel de Agregar Cuenta -->
+
+            <div class="panel panel-info">
+
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-9 col-sm-10 col-md-11">
+                    <h4>Agregar Cuenta</h4>
+                  </div>
+                  <div class="col-xs-3 col-sm-2 col-md-1">
+                    <button type="button" class="btn btn-info btn-lg" id="removeAgregarCuenta">
+                      <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel-body">
+                <div id="cuenta_1">
+
+                  <div class="row">
+
+                  <div class="col-sm-3"> <!-- Tipo de cuenta -->
+                    <p><h4>Tipo de Cuenta</h4></p>
+                    <p>
+                      <div class="form-group">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsTipo" id="optionsTipo1" value="optionTipo1">
+                              Cheques
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsTipo" id="optionsTipo2" value="optionTipo2">
+                              Ahorros
+                          </label>
+                        </div>
+                      </div>
+                    </p>
+                  </div> <!-- /Tipo de cuenta -->
+
+                  <div class="col-sm-3"> <!-- Saldo Inicial -->
+                    <p><h4>Saldo Inicial</h4></p>
+                    <p>
+                      <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                      </div>
+                    </p>
+                  </div><!-- /Saldo Inicial -->
+
+                    <div class="col-sm-3"> <!-- Protección -->
+                      <div id="proteccion">
+                        <p><h4>Protección</h4></p>
+                        <p>
+                          <div class="form-group">
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionProt" id="optionProt1" value="optionProt1" >
+                                Si
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionProt" id="optionProt2" value="optionProt2" >
+                                No
+                              </label>
+                            </div>
+                          </div>
+                        </p>
+                      </div>
+                    </div> <!-- /Protección -->
+
+                    <div class="col-sm-3"> <!-- Boton de  Añadir -->
+                      <br><br>
+                      <button type="button" class="btn btn-default">Añadir</button>
+                    </div> <!-- /Boton de  Añadir -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="panel panel-primary"> <!-- Panel con listado de cuentas -->
+            <div class="panel-heading">
+              <h4>Listado de cuentas creadas</h4>
+            </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Tipo Cuenta</th>
+                    <th>Saldo</th>
+                    <th>Protección</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>34</td>
+                    <td>Ahorro</td>
+                    <td>400.00</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Cheques</td>
+                    <td>1000.00</td>
+                    <td>Si</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-lg">Generar Cliente</button>
+
+        </form>
       </div>
 
     </div><!-- /.container -->
@@ -67,5 +206,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='js/script_page.js'></script>
   </body>
 </html>
